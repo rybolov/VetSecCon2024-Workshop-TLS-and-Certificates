@@ -51,6 +51,11 @@ https://deliciousbrains.com/ssl-certificate-authority-for-local-https-developmen
 Look at your certificate:  
 `openssl x509 -in myCA.pem -text -noout`
 
+Add to your root CA store:  
+`cp myCA.pem /usr/local/share/ca-certificates/myCA.pem`  
+`update-ca-certificates`  
+
+
 ### Create a Certificate Using Your CA
 `openssl genrsa -out webserver.key 2048`  
 `openssl req -new -key webserver.key -out webserver.csr`  
