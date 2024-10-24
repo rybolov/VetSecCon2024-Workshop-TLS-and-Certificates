@@ -30,6 +30,16 @@ TLS: Transport Layer Security
 `curl -v -o /dev/null https://www.google.com/`  
 `curl --insecure -v -o /dev/null https://www.google.com/`  
 
+### View your Root CAs
+Windows: `certmgr.msc`  
+MacOS: Applications => Utilities => Keychain Access  
+Linux: `ls /etc/ssl/certs`  
+
+### View your machine certificates
+Windows: `certlm.msc`  
+MacOS: Applications => Utilities => Keychain Access  
+Linux: `ls /etc/ssl/private`  
+
 ### Create Your Own CA and Certificate
 https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/  
 `sudo apt-get install ca-certificates`  
@@ -57,6 +67,11 @@ Look at your certificate:
 Replace the certificate file paths.  
 `sudo systemctl restart apache2`
 
+
+### SSL Labs
+
+https://www.ssllabs.com/ssltest/  
+
 ### Installing Postfix Email Server with TLS
 https://ubuntu.com/server/docs/install-and-configure-postfix
 
@@ -67,10 +82,6 @@ AWS: https://aws.amazon.com/certificate-manager/
 Azure: https://learn.microsoft.com/en-us/azure/app-service/configure-ssl-certificate  
 GCP: https://cloud.google.com/security/products/certificate-authority-service
 
-
-### SSL Labs
-
-https://www.ssllabs.com/ssltest/  
 
 
 
